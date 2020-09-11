@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=B612&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="description"
+      content="A simple weather app to check the weather condition
+       of various cities around the world built 
+       by Oguejiofor Uzodike"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#b36f2a" />
+    <meta name="msapplication-TileColor" content="#b36f2a" />
+    <meta name="theme-color" content="#b36f2a" />
+    <title>What's the Weather!</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>What's the Weather!</h1>
+        <div class="image-container">
+          <img src="./sunlogo.png" alt="sun" class="img-logo" />
+        </div>
+      </div>
+
+      <form class="form-container">
+        <input
+          type="text"
+          placeholder="search city"
+          class="input-field"
+          aria-label="field-label"
+        />
+
+        <button type="submit" class="button">Check &#127769;</button>
+      </form>
+
+      <div class="msg"></div>
+    </header>
+    <main class="main">
+      <section class="section-container">
+        <div class="data">
+          <div class="city"></div>
+          <p class="pseudo">I am waiting for your search! &#128526;</p>
+          <div class="date"></div>
+          <div class="temp"></div>
+          <div class="icon">
+            <img src="" alt="" class="img-icon" />
+          </div>
+          <div class="humidity"></div>
+          <div class="wind"></div>
+          <div class="weather"></div>
+        </div>
+      </section>
+    </main>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").then(function () {
+          console.log("Service Worker Registered");
+        });
+      }
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>

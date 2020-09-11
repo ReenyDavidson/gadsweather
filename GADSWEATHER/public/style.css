@@ -1,0 +1,201 @@
+body {
+  background-image: url("sun3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-origin: border-box;
+}
+
+h1 {
+  font-family: "B612", sans-serif;
+}
+
+.img-logo {
+  width: 40px;
+}
+
+.image-container {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-container {
+  width: 40vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.input-field {
+  font-size: 2rem;
+  border: none;
+  height: 2.5rem;
+  background-color: transparent;
+  padding: 0.31rem 0.31rem 0.31rem;
+  border-bottom: 0.3rem solid;
+  font-family: "B612", sans-serif;
+  transition: 0.3s linear;
+}
+
+.input-field:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+
+::placeholder {
+  color: lightgray;
+}
+
+.button {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 0.9rem;
+  border: none;
+  margin-left: 3rem;
+  margin-top: 0.9rem;
+  border-radius: 0.31rem;
+  background: black;
+  color: white;
+  font-family: "B612", sans-serif;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.main {
+  margin: 0 auto;
+  width: 30rem;
+  transition: 0.1s linear;
+}
+
+.section-container {
+  background-color: ghostwhite;
+
+  opacity: 0.9;
+  border-radius: 15px 20px;
+  box-shadow: 5px 10px gainsboro;
+  font-family: "B612", sans-serif;
+  margin: 0 auto;
+  transition: 1s linear;
+}
+
+.data {
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.city {
+  font-size: 2.9rem;
+  background-color: aliceblue;
+}
+
+.temp {
+  font-size: 4.1rem;
+  text-shadow: 4px 4px darkslategray;
+  letter-spacing: 5px;
+}
+.msg {
+  font-family: "B612", sans-serif;
+
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 3rem;
+}
+
+.humidity,
+.wind,
+.weather {
+  padding-bottom: 0.6rem;
+
+  letter-spacing: 1.4px;
+}
+
+.icon {
+  padding-bottom: 0.6rem;
+}
+
+.date {
+  padding-bottom: 1.3rem;
+}
+
+.pseudo {
+  position: absolute;
+  font-size: 1.3rem;
+  animation: "text-revealer" 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes text-revealer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 150vh;
+
+    max-width: 100%;
+  }
+
+  h1 {
+    font-weight: lighter;
+  }
+
+  .input-field {
+    font-size: 1.5rem;
+    height: 1rem;
+    transition: 0.3s linear;
+  }
+  .main {
+    max-width: 22rem;
+  }
+
+  .form-container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: table;
+    justify-content: center;
+  }
+  .button {
+    position: relative;
+    right: 50px;
+  }
+  .pseudo {
+    position: absolute;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .city {
+    font-size: 1.6rem;
+    max-width: 10rem;
+  }
+
+  .temp {
+    font-size: 2rem;
+  }
+}
